@@ -41,6 +41,8 @@ What branches would change, and how?
 git checkout test
 git merge top_N
 ```
+the test branch changes because top_N is merged in and now has the
+top_N code instead of the top_5.
 
 6. What do you think would happen if you ran the following commands?
 What branches would change, and how?
@@ -48,6 +50,7 @@ What branches would change, and how?
 git checkout top_ten
 git merge test
 ```
+the top_ten branch changes as test is merged in and removes the top_10 code.
 
 7. What do you think would happen if you ran the following commands?
 What branches would change, and how?
@@ -56,3 +59,5 @@ git checkout test
 git rebase top_ten
 git rebase top_N
 ```
+it rebases top_ten and top_N into test and changges only the test branch,
+but there are merge conflicts  so we kept most of the top_N code. 
